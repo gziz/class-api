@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from .ml import KMeans
-from .models import Request
+from .models import PredictionRequest
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 MODEL_DIR = BASE_DIR / "models"
@@ -21,6 +21,7 @@ app = FastAPI(lifespan=lifespan)
 
 
 @app.post("/predict")
-def predict(req: Request):
-    pred = app.state.model.predict(req.data)
-    return pred
+def predict(request: PredictionRequest):
+    model = app.state.model
+    prediction = model.predict(request.model_dump())
+    return {"cluster": prediction}
