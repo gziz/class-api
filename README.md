@@ -1,4 +1,5 @@
-# ML - API
+# ML - API 
+
 Machine learning API para clasificar vinos utilizando el algoritmo de K-Medias.
 El API es implementando en FastAPI y puede ser mantenido en Docker.
 
@@ -35,3 +36,15 @@ curl --location 'http://127.0.0.1:8080/predict' \
 
 }'
 ```
+
+--- 
+
+## Equipo: The Last Dance
+
+### Integrantes
+- Gerardo Moreno Zizumbo - A01734876
+- Sofia Ingigerth Cañas Urbina - A01173828
+- Eugenio Morales Ortiz - A01734612
+- Enrique García Varela - A01705747
+- Damian Albino Mejia - A01246716
+- Daniel Saldaña Rodríguez - A00829752
